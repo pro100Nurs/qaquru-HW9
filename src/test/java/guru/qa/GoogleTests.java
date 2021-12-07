@@ -8,11 +8,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class GoogleTests {
+    String URL = "https://google.com";
 
     @Test
     void selenideSearchTest() {
         // Открыть google
-        open("https://google.com");
+        open(URL);
 
         // Ввести Selenide в поиск
         $(byName("q")).setValue("Selenide").pressEnter();
